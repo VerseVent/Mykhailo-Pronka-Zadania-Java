@@ -8,13 +8,13 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("liczby.txt"));
         int str = 0;
-        List<Integer> list = new ArrayList();
+        List<Integer> lista = new ArrayList();
         while (scan.hasNextInt()) {
-            wiersz = scan.nextInt();
-            list.add(str);
+            str = scan.nextInt();
+            lista.add(str);
         }
-        int max = Collections.max(list);
-        int min = Collections.min(list);
+        int max = Collections.max(lista);
+        int min = Collections.min(lista);
         System.out.println("Max = " + max);
         System.out.println("Min = " + min);
     }
