@@ -5,20 +5,20 @@ import java.io.PrintWriter;
 import java.util.*;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        PrintWriter parzyste = new PrintWriter("Parzyste.txt");
-        PrintWriter nieParzyste = new PrintWriter("NieParzyste.txt");
-        Scanner scanner = new Scanner(System.in);
-        int liczba = 0;
-        System.out.println("Wpisuj liczbe(kiedy juz skonczysz napisz 'koniec'): ");
+        PrintWriter liczbyParzyste = new PrintWriter("Parzyste.txt");
+        PrintWriter liczbyNieParzyste = new PrintWriter("NieParzyste.txt");
+        Scanner scan = new Scanner(System.in);
+        int i = 0;
+        System.out.println("Wpisuj liczbe, jezeli chcesz skonczyc napisz 'koniec': ");
         do{
-            liczba= scanner.nextInt();
-            if(liczba%2==0) {
-                parzyste.println(liczba);
+            i= scan.nextInt();
+            if(i%2==0) {
+                liczbyParzyste.println(i);
             }else {
-                nieParzyste.println(liczba);
+                liczbyNieParzyste.println(i);
             }
         }while (!scanner.hasNext("koniec"));
-        parzyste.close();
-        nieParzyste.close();
+        liczbyParzyste.close();
+        liczbyNieParzyste.close();
     }
 }
